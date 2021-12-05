@@ -11,4 +11,15 @@ repositories {
 
 dependencies {
     implementation(kotlin("stdlib"))
+
+    val nettyVersion = "4.1.50.Final"
+    implementation("io.netty:netty-buffer:$nettyVersion")
+    implementation("io.netty:netty-common:$nettyVersion")
+    implementation("io.netty:netty-transport:$nettyVersion")
+    implementation("io.netty:netty-handler:$nettyVersion")
+    implementation("io.netty:netty-codec-http:$nettyVersion")
+    implementation("io.netty:netty-codec:$nettyVersion")
+    implementation("io.netty:netty-transport-native-epoll:$nettyVersion")
+
+    implementation("org.slf4j:slf4j-api:1.7.32")
 }
