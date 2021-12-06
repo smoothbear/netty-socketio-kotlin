@@ -21,5 +21,8 @@ dependencies {
     implementation("io.netty:netty-codec:$nettyVersion")
     implementation("io.netty:netty-transport-native-epoll:$nettyVersion")
 
+    // For reflect
+    implementation("org.jetbrains.kotlin:kotlin-reflect:1.6.0")
+
     implementation("org.slf4j:slf4j-api:1.7.32")
 }

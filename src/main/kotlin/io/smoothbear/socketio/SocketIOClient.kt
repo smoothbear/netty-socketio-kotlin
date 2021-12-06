@@ -11,7 +11,7 @@ interface SocketIOClient : ClientOperations, Store {
 
     fun getTransport(): Transport
 
-    fun sendEvent(name: String, ackCallback: AckCallback<*>)
+    fun sendEvent(name: String, ackCallback: AckCallback<*>, vararg data: Any)
 
     fun send(packet: Packet, ackCallback: AckCallback<*>)
 

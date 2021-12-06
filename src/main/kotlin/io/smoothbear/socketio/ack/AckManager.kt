@@ -87,7 +87,7 @@ class AckManager (
         return ackEntry.getAckCallback(index)
     }
 
-    fun registerAck(sessionId: UUID, callback: AckCallback<*>) {
+    fun registerAck(sessionId: UUID, callback: AckCallback<*>): Long {
         val ackEntry = getAckEntry(sessionId)
         ackEntry.initAckIndex(0)
 
@@ -97,6 +97,8 @@ class AckManager (
             logger.debug("AckCallback registered with id: $index for client: $sessionId")
 
         scheduleTimeout(index, sessionId, callback)
+
+        return index
     }
 
     private fun scheduleTimeout(index: Long, sessionId: UUID, callback: AckCallback<*>) {

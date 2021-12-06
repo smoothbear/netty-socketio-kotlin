@@ -44,7 +44,7 @@ abstract class AckCallback<T>(
      * Executes only once when acknowledgement received from client.
      * @param result - object sent by client
      */
-    abstract fun onSuccess(result: T)
+    open fun onSuccess(result: T) {}
 
     /**
      * Invoked only once then <code>timeout</code> defined
